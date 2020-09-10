@@ -3,7 +3,8 @@ import "./Product.css";
 import { useStateValue } from "./StateProvider";
 
 function Product({ id, title, image, price, rating }) {
-  const [{ state, basket }, dispatch] = useStateValue();
+  // eslint-disable-next-line
+  const [{ state, basket}, dispatch] = useStateValue();
 
   // Checking what inside data layer currently
   // console.log("this is state called basket > ", basket);
@@ -33,7 +34,7 @@ function Product({ id, title, image, price, rating }) {
         <div className="product__rating">
           {Array(rating)
             .fill()
-            .map((_, i) => (
+            .map((_,i) => (
               <span role="img" aria-label="star">
                 🌟
               </span>
