@@ -7,4 +7,4 @@ I create this front end of amazon home page with working basket, counters, price
 - React router dom
 - Firebase
 
-This project is still going on, so I hope this could finish soon.
+This project is still in progress, so I hope this could finish soon.

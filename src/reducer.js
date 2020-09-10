@@ -7,7 +7,7 @@ export const initialState = {
 // reducer is an action listener
 const reducer = (state, action) => {
   // Checking the action
-  console.log(action);
+  // console.log(action);
 
   switch (action.type) {
     case "ADD_TO_BASKET":

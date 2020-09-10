@@ -6,7 +6,7 @@ function Product({ id, title, image, price, rating }) {
   const [{ state, basket }, dispatch] = useStateValue();
 
   // Checking what inside data layer currently
-  console.log("this is state called basket > ", basket);
+  // console.log("this is state called basket > ", basket);
 
   // Push item into data layer
   const addToBasket = () => {

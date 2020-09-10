@@ -7,15 +7,33 @@ function Subtotal() {
   // Pulling from data layer
   const [{ basket }, dispatch] = useStateValue();
 
+  const getBasketTotal = (price) => {
+    let counter = 0;
+    let checker = 0;
+    price.map((item) => {
+      let price = item.price;
+      counter = counter + price;
+      checker = checker + 1;
+      // Item positions checker
+      console.log(`Items No ${checker} with price of $${price}`);
+    });
+
+    console.log(`Subtotal : ${counter}`);
+    return counter;
+  };
+
   return (
     <div className="subtotal">
       <CurrencyFormat
+        decimalScale={2}
+        value={getBasketTotal(basket)}
+        displayType={"text"}
+        thousandSeparator={true}
+        prefix={"$"}
         renderText={(value) => (
           <>
             <p>
-              {/* homework */}
-              {/* {` ${value}`} strong*/}
-              Subtotal ({basket?.length} items): <strong>0</strong>
+              Subtotal ({basket?.length} items): <strong>{value}</strong>
             </p>
             <small className="subtotal_gift">
               <input type="checkbox" />
@@ -23,12 +41,6 @@ function Subtotal() {
             </small>
           </>
         )}
-        decimalScale={2}
-        // getBasketTotal(basket)
-        value={0}
-        displayType={"text"}
-        thousandSeparator={true}
-        prefix={"$"}
       />
 
       <button>Proceed to Checkout</button>
