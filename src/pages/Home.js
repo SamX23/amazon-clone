@@ -9,7 +9,7 @@ function Home() {
         <img
           className="home__image"
           alt="banner"
-          src="/styles/images/banner.jpg"
+          src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Hero/Fuji_TallHero_45M_v2_1x._CB432458380_.jpg"
         />
 
         <div className="home__row">
