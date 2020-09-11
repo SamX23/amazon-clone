@@ -51,10 +51,15 @@
   font-weight: 800;
 }
 
-.header__optionBasket {
+.header__optionFeature {
   display: flex;
+  margin-right: 5px;
   align-items: center;
   color: white;
+}
+
+.header__optionFeature:active {
+  transform: translateY(2px);
 }
 
 .header__basketCount {

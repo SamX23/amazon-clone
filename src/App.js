@@ -1,38 +1,39 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./App.css";
-import Header from "./Header";
-import Home from "./Home";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Checkout from "./pages/Checkout";
+import Login from "./pages/Login";
+import WishList from "./pages/WishList";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Checkout from "./Checkout";
-import Login from "./Login";
-import {auth} from './firebase';
-import {useStateValue} from './StateProvider'
+import { auth } from "./firebase";
+import { useStateValue } from "./StateProvider";
 
 function App() {
   // eslint-disable-next-line
-  const [{}, dispatch]= useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   // listener for login_logo
-  useEffect(()=>{
+  useEffect(() => {
     // run once when the app component load
-    auth.onAuthStateChanged(authUser=>{
-      console.log('USER is >', authUser);
+    auth.onAuthStateChanged((authUser) => {
+      console.log("USER is >", authUser);
 
-      if(authUser){
+      if (authUser) {
         // user just logged in / was logged in
         dispatch({
-          type: 'SET_USER',
-          user: authUser
-        })
+          type: "SET_USER",
+          user: authUser,
+        });
       } else {
         // user is logged out
         dispatch({
-          type: 'SET_USER',
-          user: null
-        })
+          type: "SET_USER",
+          user: null,
+        });
       }
-    })
-  }, [dispatch])
+    });
+  }, [dispatch]);
 
   return (
     // BEM
@@ -40,16 +41,18 @@ function App() {
       <div className="app">
         <Switch>
           <Route path="/login">
-          <Login/>
+            <Login />
+          </Route>
+          <Route path="/wishlist">
+            <Header />
+            <WishList />
           </Route>
           <Route path="/checkout">
-          <Header />
-
+            <Header />
             <Checkout />
           </Route>
           <Route path="/">
-          <Header />
-
+            <Header />
             <Home />
           </Route>
         </Switch>

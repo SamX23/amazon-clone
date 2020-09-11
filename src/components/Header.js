@@ -1,19 +1,20 @@
 import React from "react";
-import "./Header.css";
+import "../styles/Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
+import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
 import { Link } from "react-router-dom";
-import { useStateValue } from "./StateProvider";
-import {auth} from './firebase';
+import { useStateValue } from "../StateProvider";
+import { auth } from "../firebase";
 
 function Header() {
   // Pulling from datalayer/reducer
   const [{ basket, user }] = useStateValue();
-  const handleAuthentication =()=>{
-    if(user){
+  const handleAuthentication = () => {
+    if (user) {
       auth.signOut();
     }
-  }
+  };
   return (
     <div className="header">
       <Link to="/">
@@ -32,16 +33,13 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to={!user && '/login'}>
-        <div
-            onClick={handleAuthentication}
-            className="header__option"
-            >
-          <span className="header__optionLineOne">Hello {user?.email}</span>
+        <Link to={!user && "/login"}>
+          <div onClick={handleAuthentication} className="header__option">
+            <span className="header__optionLineOne">Hello {user?.email}</span>
             <span className="header__optionLineTwo">
-            {user ? 'Sign Out': 'Sign In'}
+              {user ? "Sign Out" : "Sign In"}
             </span>
-        </div>
+          </div>
         </Link>
 
         <div className="header__option">
@@ -58,8 +56,14 @@ function Header() {
           </Link>
         </div>
 
+        <Link to="/wishlist">
+          <div className="header__optionFeature">
+            <BookmarkBorderIcon />
+          </div>
+        </Link>
+
         <Link to="/checkout">
-          <div className="header__optionBasket">
+          <div className="header__optionFeature">
             <ShoppingBasketIcon />
             <span className="header__optionLineTwo header__basketCount">
               {basket?.length}

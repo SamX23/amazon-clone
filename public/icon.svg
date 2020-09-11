@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 50 50" xml:space="preserve">
+<desc>Created with Fabric.js 3.6.3</desc>
+<defs>
+</defs>
+<rect x="0" y="0" width="100%" height="100%" fill="rgba(171,211,247,1)"></rect>
+<g transform="matrix(0.69 0 0 0.69 25.05 14.74)" style=""  >
+		<text xml:space="preserve" font-family="Bebas Neue" font-size="40" font-style="normal" font-weight="400" style="stroke: rgb(0,0,0); stroke-width: 0.1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1; white-space: pre;" ><tspan x="-8.02" y="12.57" >A</tspan></text>
+</g>
+<g transform="matrix(0.32 0 0 0.32 25.18 35.79)" style=""  >
+		<text xml:space="preserve" font-family="Alfa Slab One" font-size="40" font-style="normal" font-weight="400" style="stroke: rgb(0,0,0); stroke-width: 0.1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1; white-space: pre;" ><tspan x="-76.44" y="12.57" >CLONE</tspan></text>
+</g>
+</svg>
