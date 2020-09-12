@@ -12,7 +12,7 @@ I create this front end and back end (cloud functions) of Amazon with working ba
 - Express for backend
 - Cors
 
-This project is still in progress, so I hope this could finish soon.
+This project is still in progress, I haven't deployed the payment and order page, hope to finish it soon.
 
 ## Screenshot
 
