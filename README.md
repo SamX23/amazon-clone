@@ -13,3 +13,11 @@ I create this front end and back end (cloud functions) of Amazon with working ba
 - Cors
 
 This project is still in progress, so I hope this could finish soon.
+
+## Screenshot
+
+![Home page](https://github.com/SamX23/amazon-clone/blob/master/screenshot/amazon-1.png)
+
+![Cart page](https://github.com/SamX23/amazon-clone/blob/master/screenshot/amazon-2.png)
+
+![Login page](https://github.com/SamX23/amazon-clone/blob/master/screenshot/amazon-3.png)
