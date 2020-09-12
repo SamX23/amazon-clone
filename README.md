@@ -1,10 +1,15 @@
 # My amazon clone project
 
-I create this front end of amazon home page with working basket, counters, price, login page and so on. The technology used in this projects are :
+I create this front end and back end (cloud functions) of Amazon with working basket, wishlist, login page, payment using stripe and so on. The technology used in this projects are :
 
 - React
 - React Context api
 - React router dom
-- Firebase
+- Material Icons
+- Firebase (deployment, database, cloud functions)
+- Stripe (payment) @stripe/stripe-js, @stripe/react-stripe-js
+- Axios
+- Express for backend
+- Cors
 
 This project is still in progress, so I hope this could finish soon.

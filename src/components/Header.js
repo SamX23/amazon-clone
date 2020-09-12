@@ -3,7 +3,7 @@ import "../styles/Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
-import PlaceIcon from '@material-ui/icons/Place';
+import PlaceIcon from "@material-ui/icons/Place";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import { auth } from "../firebase";
@@ -17,7 +17,7 @@ function Header() {
     }
   };
   return (
-    <div className='top'>
+    <div className="top">
       <div className="header">
         <Link className="hoverLn" to="/">
           <img
@@ -35,7 +35,7 @@ function Header() {
         </div>
 
         <div className="header__nav">
-          <Link to={!user && "/login"} className='hoverLn'>
+          <Link to={!user && "/login"} className="hoverLn">
             <div onClick={handleAuthentication} className="header__option">
               <span className="header__optionLineOne">Hello {user?.email}</span>
               <span className="header__optionLineTwo">
@@ -58,13 +58,13 @@ function Header() {
             </Link>
           </div>
 
-          <Link to="/wishlist" className='hoverLn'>
+          <Link to="/wishlist" className="hoverLn">
             <div className="header__optionFeature">
               <BookmarkBorderIcon />
             </div>
           </Link>
 
-          <Link to="/checkout" className='hoverLn'>
+          <Link to="/checkout" className="hoverLn">
             <div className="header__optionFeature">
               <ShoppingBasketIcon />
               <span className="header__optionLineTwo header__basketCount">
@@ -75,19 +75,19 @@ function Header() {
         </div>
       </div>
       <div className="subheader">
-        <div className='subheader__left hoverLn'>
-          <PlaceIcon className='header__optionFeature'/>
+        <div className="subheader__left hoverLn">
+          <PlaceIcon className="header__optionFeature" />
           <div className="header__option">
             <span className="header__optionLineOne">Deliver to</span>
             <span className="header__optionLineTwo">Indonesia</span>
           </div>
         </div>
-        <div className='subheader__right'>
-              <p>Today's Deals</p>
-              <p>Customer Service</p>
-              <p>Gift Cards</p>
-              <p>Registry</p>
-              <p>Sell</p>
+        <div className="subheader__right">
+          <p>Today's Deals</p>
+          <p>Customer Service</p>
+          <p>Gift Cards</p>
+          <p>Registry</p>
+          <p>Sell</p>
         </div>
       </div>
     </div>

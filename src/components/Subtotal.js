@@ -3,26 +3,12 @@ import "../styles/Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../StateProvider";
 import { getBasketTotal } from "../reducer";
+import { useHistory } from "react-router-dom";
 
 function Subtotal() {
   // Pulling from data layer
+  const history = useHistory();
   const [{ basket }] = useStateValue();
-
-  // My solutions, shorter solutions can be found on reducer.js
-  // const getBasketTotal = (price) => {
-  //   let counter = 0;
-  //   let checker = 0;
-  //   price.map((item) => {
-  //     let price = item.price;
-  //     counter = counter + price;
-  //     checker = checker + 1;
-  //     // Item positions checker
-  //     console.log(`Items No ${checker} with price of $${price}`);
-  //   });
-  //
-  //   console.log(`Subtotal : ${counter}`);
-  //   return counter;
-  // };
 
   return (
     <div className="subtotal">
@@ -45,7 +31,9 @@ function Subtotal() {
         )}
       />
 
-      <button>Proceed to Checkout</button>
+      <button onClick={(e) => history.push("./payment")}>
+        Proceed to Checkout
+      </button>
     </div>
   );
 }

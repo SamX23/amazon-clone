@@ -16,10 +16,12 @@ function WishList() {
 
       <div>
         <h3>Hi, {user?.email}</h3>
-        <h2 className="wishlist__title">Wishlist
-        <span role="img" aria-label="star">
-          ✨
-        </span></h2>
+        <h2 className="wishlist__title">
+          Wishlist
+          <span role="img" aria-label="star">
+            ✨
+          </span>
+        </h2>
         {wishlist.map((item) => (
           <CheckoutProduct
             key={item.id}
