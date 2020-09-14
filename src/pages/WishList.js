@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/WishList.css";
 import { useStateValue } from "../StateProvider";
 import CheckoutProduct from "../components/CheckoutProduct";
 

@@ -1,0 +1,14 @@
+/* Pages */
+@import "./pages/Home.css";
+@import "./pages/Login.css";
+@import "./pages/Orders.css";
+@import "./pages/Payment.css";
+@import "./pages/WishList.css";
+@import "./pages/Checkout.css";
+
+/* Component */
+@import "./components/Header.css";
+@import "./components/Order.css";
+@import "./components/CheckoutProduct.css";
+@import "./components/Product.css";
+@import "./components/Subtotal.css";

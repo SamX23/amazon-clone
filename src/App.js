@@ -11,14 +11,15 @@ import Login from "./pages/Login";
 import WishList from "./pages/WishList";
 import Payment from "./pages/Payment";
 import Orders from "./pages/Orders";
-import "./App.css";
+import "./styles/App.css";
 
 const promise = loadStripe(
   "pk_test_51HQPEeJJyyFi6Yacx6CD61hdUBjWstomMsc0F2MMuK8AQ2Mpc7lOPqx1GkAzRa5Ra3qJAUyQA8l3HYcovar1Mw9D00klu1Rt7B"
 );
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  // eslint-disable-next-line
+  const [{ state }, dispatch] = useStateValue();
 
   // listener for login_logo
   useEffect(() => {
@@ -44,8 +45,9 @@ function App() {
 
   return (
     // BEM
-    <Router>
-      <div className="app">
+
+    <div className="app">
+      <Router>
         <Switch>
           <Route path="/orders">
             <Header />
@@ -78,8 +80,8 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

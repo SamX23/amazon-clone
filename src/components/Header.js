@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/Header.css";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
@@ -17,8 +16,8 @@ function Header() {
     }
   };
   return (
-    <div className="top">
-      <div className="header">
+    <div className="header">
+      <div className="header__top">
         <Link className="hoverLn" to="/">
           <img
             className="header__logo"
@@ -35,7 +34,7 @@ function Header() {
         </div>
 
         <div className="header__nav">
-          <Link to={!user && "/login"} className="hoverLn">
+          <Link to={!user && "/login"} className="option-hover">
             <div onClick={handleAuthentication} className="header__option">
               <span className="header__optionLineOne">Hello {user?.email}</span>
               <span className="header__optionLineTwo">
@@ -45,26 +44,26 @@ function Header() {
           </Link>
 
           <Link to="/orders">
-            <div className="header__option hoverLn header__order">
+            <div className="header__option option-hover">
               <span className="header__optionLineOne">Returns</span>
               <span className="header__optionLineTwo">& Orders</span>
             </div>
           </Link>
 
-          <div className="header__option hoverLn">
+          <div className="header__option option-hover">
             <span className="header__optionLineOne">Your</span>
             <Link to="/">
               <span className="header__optionLineTwo">Prime</span>
             </Link>
           </div>
 
-          <Link to="/wishlist" className="hoverLn">
+          <Link to="/wishlist" className="option-hover">
             <div className="header__optionFeature">
               <BookmarkBorderIcon />
             </div>
           </Link>
 
-          <Link to="/checkout" className="hoverLn">
+          <Link to="/checkout" className="option-hover">
             <div className="header__optionFeature">
               <ShoppingBasketIcon />
               <span className="header__optionLineTwo header__basketCount">

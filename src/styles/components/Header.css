@@ -1,4 +1,4 @@
-.top {
+.header {
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -6,21 +6,21 @@
   z-index: 100;
 }
 
-.header {
+.header__top {
   height: 60px;
   display: flex;
   align-items: center;
   background-color: #131921;
 }
 
-.header a {
+.header__top a {
   display: flex;
   text-decoration: none;
   font-style: unset;
   color: white;
 }
 
-.hoverLn:hover {
+.option-hover:hover {
   box-shadow: 0 0 0 1px #fff inset;
 }
 
@@ -60,13 +60,7 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  width: 100%;
-  min-width: 45px;
   color: white;
-}
-
-.header__order {
-  min-width: 60px;
 }
 
 .header__optionLineOne {

@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/CheckoutProduct.css";
 import { useStateValue } from "../StateProvider";
 import FlipMove from "react-flip-move";
 

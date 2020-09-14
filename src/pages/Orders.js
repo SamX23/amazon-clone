@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import Order from "../components/Order";
 import { db } from "../firebase";
 import { useStateValue } from "../StateProvider";
-import "../styles/Orders.css";
 
 function Orders() {
-  const [{ user }, dispatch] = useStateValue();
+  const [{ user }] = useStateValue();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {

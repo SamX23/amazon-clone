@@ -6,7 +6,6 @@ import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
 import CheckoutProduct from "../components/CheckoutProduct";
 import axios from "../axios";
-import "../styles/Payment.css";
 import { db } from "../firebase";
 
 function Payment() {
@@ -125,8 +124,12 @@ function Payment() {
           </div>
           <div className="payment__details">
             {/* Stripe */}
+            <h4>Payment Method</h4>
             <form onSubmit={handleSubmit}>
-              <CardElement onChange={handleChange} />
+              <CardElement
+                className="payment__creditCard"
+                onChange={handleChange}
+              />
 
               <div className="payment__priceContainer">
                 <CurrencyFormat

@@ -1,18 +1,27 @@
 # My amazon clone project
 
-I create this front end and back end (cloud functions) of Amazon with working basket, wishlist, login page, payment using stripe and so on. The technology used in this projects are :
+I create this front end and back end (cloud functions) of Amazon with working basket, account and payment using stripe. The technology used in this projects are :
 
-- React
-- React Context api
-- React router dom
-- Material Icons
+- React, Context api, router dom
+- Material Icons/Ui
 - Firebase (deployment, database, cloud functions)
 - Stripe (payment) @stripe/stripe-js, @stripe/react-stripe-js
-- Axios
-- Express for backend
-- Cors
+- Axios, Cors and Express for backend
 
-This project is still in progress, I haven't deployed the payment and order page, hope to finish it soon.
+## Usage
+
+- Visit the page
+- Login using fake emails
+- add basket
+- proceed orders
+- doing payment using fake CC 42424242(until the end)
+- submit. (notes)
+
+### Cloud functions (payment) only supported until Feb 15, 2021.
+
+Notes:
+
+Currently using node 8 and I have a bit problem with the cors API, so the payment will not going through after the order page. Once fixed, you can see your successful order on the orders page.
 
 ## Screenshot
 

@@ -1,6 +1,5 @@
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import React from "react";
-import "../styles/Product.css";
 import { useStateValue } from "../StateProvider";
 
 function Product({ id, title, image, price, rating }) {
