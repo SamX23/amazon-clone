@@ -21,7 +21,7 @@
 }
 
 .hoverLn:hover {
-  box-shadow: 0 0 0 1px  #fff inset;
+  box-shadow: 0 0 0 1px #fff inset;
 }
 
 .header__logo {
@@ -61,12 +61,12 @@
   flex-direction: column;
   padding: 10px;
   width: 100%;
-  min-width:45px;
+  min-width: 45px;
   color: white;
 }
 
-.order{
-  min-width:60px;
+.header__order {
+  min-width: 60px;
 }
 
 .header__optionLineOne {
@@ -94,30 +94,30 @@
   margin-right: 10px;
 }
 
-.subheader{
+.subheader {
   display: flex;
   align-items: center;
   background-color: #232f3e;
   height: 39px;
 }
 
-.subheader__left{
+.subheader__left {
   display: flex;
   align-items: center;
 }
 
-.subheader__left > .header__optionFeature{
+.subheader__left > .header__optionFeature {
   margin: 0;
   padding-left: 10px;
   padding-bottom: 2px;
 }
 
-.subheader__left > .header__option{
+.subheader__left > .header__option {
   margin-left: 2px;
   padding: 0;
 }
 
-.subheader__right{
+.subheader__right {
   color: white;
   margin-left: 50px;
   display: flex;
@@ -132,5 +132,5 @@
 }
 
 .subheader__right > p:hover {
-  box-shadow: 0 0 0 1px  #fff inset;
+  box-shadow: 0 0 0 1px #fff inset;
 }

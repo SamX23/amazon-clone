@@ -7,6 +7,7 @@ import CurrencyFormat from "react-currency-format";
 import CheckoutProduct from "../components/CheckoutProduct";
 import axios from "../axios";
 import "../styles/Payment.css";
+import { db } from "../firebase";
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -36,6 +37,7 @@ function Payment() {
   }, [basket]);
 
   console.log("The secret is :", clientSecret);
+  // console.log("person :", user);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -50,6 +52,16 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         //   paymentIntent = payment confirmation
+
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
 
         setSucceeded(true);
         setError(null);

@@ -9,9 +9,11 @@
   background-color: rgb(234, 237, 237);
   border-bottom: 1px solid lightgray;
 }
+
 .payment__container > h1 a {
   text-decoration: none;
 }
+
 .payment__section {
   display: flex;
   padding: 20px;
@@ -27,4 +29,9 @@
 .payment__items,
 .payment__details {
   flex: 0.8;
+}
+
+.payment__details > form {
+  margin-left: 20px;
+  max-width: 400px;
 }

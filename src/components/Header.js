@@ -44,12 +44,12 @@ function Header() {
             </div>
           </Link>
 
-          <div className="header__option hoverLn order">
-            <span className="header__optionLineOne">Returns</span>
-            <Link to="/">
+          <Link to="/orders">
+            <div className="header__option hoverLn header__order">
+              <span className="header__optionLineOne">Returns</span>
               <span className="header__optionLineTwo">& Orders</span>
-            </Link>
-          </div>
+            </div>
+          </Link>
 
           <div className="header__option hoverLn">
             <span className="header__optionLineOne">Your</span>

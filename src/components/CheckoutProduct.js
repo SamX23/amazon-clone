@@ -3,7 +3,7 @@ import "../styles/CheckoutProduct.css";
 import { useStateValue } from "../StateProvider";
 import FlipMove from "react-flip-move";
 
-function CheckoutProduct({ id, image, title, price, rating }) {
+function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
   // eslint-disable-next-line
   const [{ basket }, dispatch] = useStateValue();
 
@@ -35,7 +35,10 @@ function CheckoutProduct({ id, image, title, price, rating }) {
               </span>
             ))}
         </div>
-        <button onClick={removeFromBasket}>Remove from basket</button>
+
+        {!hideButton && (
+          <button onClick={removeFromBasket}>Remove from basket</button>
+        )}
       </div>
     </div>
     // </FlipMove>
