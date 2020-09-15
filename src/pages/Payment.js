@@ -77,7 +77,7 @@ function Payment() {
     // Listening any changes in CardElement
     // Display errors
     setDisabled(event.empty);
-    setDisabled(event.error ? event.error.message : "");
+    setError(event.error ? event.error.message : "");
   };
 
   return (
