@@ -10,18 +10,17 @@ const stripe = require("stripe")(
 // - App config
 const app = express();
 
-// - Middleware
-app.use(cors({ origin: true }));
+// - Middleware { origin: true }
+app.use(cors({ origin: "https://challenge-97a60.web.app/" }));
 app.use(express.json());
 
 // - API routes
-app.get("/", (request, response) =>
-  response
-    .status(200)
-    .send(
-      "Bismillah, this is Sami Kalammallah cloud functions, visit me on https://samx23.github.io"
-    )
-);
+app.get("/", (request, response) => {
+  response.status(200).send(
+    "Test : 5 < Origin"
+    // "Bismillah, this is Sami Kalammallah cloud functions, visit me on https://samx23.github.io >> New CORS"
+  );
+});
 
 app.post("/payments/create", async (request, response) => {
   const total = request.query.total;
